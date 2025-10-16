@@ -25,3 +25,24 @@ Describe expected outputs, screenshots to capture, or verification steps.
 - Add any helpful hints or troubleshooting tips here.
 - Keep commands and outputs clear for grading.
 
+
+INSEM-LAB-1
+mkdir fullstack-project
+cd fullstack-project
+git init
+echo "# Fullstack Project" > README.md
+git add README.md
+git commit -m "Initial commit"
+git branch frontend
+git branch backend
+git checkout frontend
+echo "<h1>Frontend</h1>" > index.html
+git add .
+git commit -m "Added frontend code"
+git checkout backend
+echo "print('Backend API running')" > app.py
+git add .
+git commit -m "Added backend code"
+git checkout main
+git merge frontend
+git merge backend
